@@ -11,7 +11,7 @@
 	<h3>输入：</h3>
 	<p>人话 : <textarea id="人话"></textarea></p>
 	<p>设定 : <input id="设定"></p>
-	<p>注意 : 请输入英文字母/空格/分号（作句号用）。输入其他文字或符号可能无法转换或出现其他不可预知的bug，输出文字均为小写，与输入文字大小写无关。</p><br>
+	<p>注意 : 请输入英文字母/数字/空格/分号（作句号用）。输入其他文字或符号可能保留原文或出现其他不可预知的bug，输出文字均为小写，与输入文字大小写无关。</p><br>
 	<botton onclick="鱼化()">[鱼化]</botton><br><br>
 	<h3><div id="鱼话"></div></h3>
 <script>
@@ -50,7 +50,17 @@ var 转换中=转换中.myReplace('v','~...-');
 var 转换中=转换中.myReplace('w','~.--');
 var 转换中=转换中.myReplace('x','~-..-');
 var 转换中=转换中.myReplace('y','~-.--');
-var 点话=转换中.myReplace('z','~--..');
+var 转换中=转换中.myReplace('z','~--..');
+var 转换中=转换中.myReplace('1','~.----');
+var 转换中=转换中.myReplace('2','~..---');
+var 转换中=转换中.myReplace('3','~...--');
+var 转换中=转换中.myReplace('4','~....-');
+var 转换中=转换中.myReplace('5','~.....');
+var 转换中=转换中.myReplace('6','~-....');
+var 转换中=转换中.myReplace('7','~--...');
+var 转换中=转换中.myReplace('8','~---..');
+var 转换中=转换中.myReplace('9','~----.');
+var 点话=转换中.myReplace('0','~-----');
 var 鱼话u=点话.replace(/-/g,'u');
 var 鱼话r=鱼话u.replace(/\./g,'r');
 var 鱼话g=鱼话r.replace(/~/g,'g');
