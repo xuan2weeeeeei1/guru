@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>鱼的叫声模拟器</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="实时()">
+<h2>鱼的叫声模拟器</h2> 
+	<h3><div>gruugrgrurgururguuuguugr!！</div></h3>
+	<h3>输入：</h3>
+	<p>人话 : <textarea id="人话"></textarea></p>
+	<p>设定 : <input id="设定"></p>
+	<p>注意 : 请输入英文字母/空格/分号（作句号用）。输入其他文字或符号可能无法转换或出现其他不可预知的bug，输出文字均为小写，与输入文字大小写无关。</p><br>
+	<botton onclick="鱼化()">[鱼化]</botton><br><br>
+	<h3><div id="鱼话"></div></h3>
+<script>
+function 鱼化(){
+
+String.prototype.myReplace=function(f,e){//吧f替换成e
+    var reg=new RegExp(f,"ig"); //创建正则RegExp对象   
+    return this.replace(reg,e); 
+}
+
+	var 人话 = document.getElementById("人话").value;
+	var 设定 = document.getElementById("设定").value;
+设定=Number(设定);
+var 转换中=人话.myReplace('a','~.-');
+var 转换中=转换中.myReplace('b','~.-');
+var 转换中=转换中.myReplace('c','~-.-.');
+var 转换中=转换中.myReplace('d','~-..');
+var 转换中=转换中.myReplace('e','~.');
+var 转换中=转换中.myReplace('f','~..-.');
+var 转换中=转换中.myReplace('g','~--.');
+var 转换中=转换中.myReplace('h','~....');
+var 转换中=转换中.myReplace('i','~..');
+var 转换中=转换中.myReplace('j','~.---');
+var 转换中=转换中.myReplace('k','~-.-');
+var 转换中=转换中.myReplace('l','~.-.');
+var 转换中=转换中.myReplace('m','~--');
+var 转换中=转换中.myReplace('n','~-.');
+var 转换中=转换中.myReplace('o','~---');
+var 转换中=转换中.myReplace('p','~.--.');
+var 转换中=转换中.myReplace('q','~--.-');
+var 转换中=转换中.myReplace('r','~.-.');
+var 转换中=转换中.myReplace('s','~...');
+var 转换中=转换中.myReplace('t','~-');
+var 转换中=转换中.myReplace('u','~..-');
+var 转换中=转换中.myReplace('v','~...-');
+var 转换中=转换中.myReplace('w','~.--');
+var 转换中=转换中.myReplace('x','~-..-');
+var 转换中=转换中.myReplace('y','~-.--');
+var 点话=转换中.myReplace('z','~--..');
+var 鱼话u=点话.replace(/-/g,'u');
+var 鱼话r=鱼话u.replace(/\./g,'r');
+var 鱼话g=鱼话r.replace(/~/g,'g');
+var 鱼话=鱼话g.replace(/ /g,' ');
+var 鱼话=鱼话.replace(/;/g,'! ');
+	document.getElementById('鱼话').innerHTML="鱼的叫声:<br>"+鱼话+"";
+}
+</script>
+</body>
+</html>
